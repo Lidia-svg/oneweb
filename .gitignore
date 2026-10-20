@@ -1,5 +1,6 @@
 node_modules/
 dist/
+offline-dist/
 .vite/
 一折入梨园_免Node运行包_20261019/
 一折入梨园_免安装运行包*.zip

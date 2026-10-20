@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import OperaDollAssistant from './OperaDollAssistant.jsx'
 import './styles.css'
 
-const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`
 
 const nav = [
   ['首页', '#cover'],
@@ -27,43 +27,43 @@ const searchItems = [
 ]
 
 const heroSlides = [
-  { image: assetUrl('/assets/jingju-hero.png'), alt: '京剧演员手持金色花扇', headingTop: '传承', headingBottom: '千年艺术', subtitle: '感受京剧的魅力与精髓', position: 'center center' },
-  { image: assetUrl('/assets/hero/脸谱.png'), alt: '京剧脸谱艺术', headingTop: '多彩脸谱', headingBottom: '艺术', subtitle: '探索脸谱背后的文化内涵', position: 'center 46%' },
-  { image: assetUrl('/assets/hero/戏服.png'), alt: '华丽京剧戏服', headingTop: '华丽戏服', headingBottom: '展示', subtitle: '了解京剧服饰的制作工艺', position: 'center 48%' },
+  { image: assetUrl('assets/jingju-hero.png'), alt: '京剧演员手持金色花扇', headingTop: '传承', headingBottom: '千年艺术', subtitle: '感受京剧的魅力与精髓', position: 'center center' },
+  { image: assetUrl('assets/hero/脸谱.png'), alt: '京剧脸谱艺术', headingTop: '多彩脸谱', headingBottom: '艺术', subtitle: '探索脸谱背后的文化内涵', position: 'center 46%' },
+  { image: assetUrl('assets/hero/戏服.png'), alt: '华丽京剧戏服', headingTop: '华丽戏服', headingBottom: '展示', subtitle: '了解京剧服饰的制作工艺', position: 'center 48%' },
 ]
 
 const eras = [
-  { number: '01', date: '1790年', title: '徽班进京', image: assetUrl('/assets/history/徽班进京.png'), text: '乾隆五十五年，三庆徽班进京献艺。此后徽班陆续入京，多种声腔在京城交汇，开启京剧孕育的序幕。' },
-  { number: '02', date: '1790—1917年', title: '京剧形成与成熟', image: assetUrl('/assets/history/京剧形成与成熟.png'), text: '徽调、汉调与昆曲、秦腔等彼此吸收，逐渐形成以西皮、二黄为代表的声腔体系；清末至民初，京剧艺术走向成熟。' },
-  { number: '03', date: '1917—1937年前后', title: '京剧鼎盛时期', image: assetUrl('/assets/history/京剧鼎盛时期.png'), text: '名家辈出、流派纷呈，演出与传播日益繁盛，京剧舞台呈现百花齐放的面貌。' },
-  { number: '04', date: '20世纪50年代起', title: '京剧改革与创新', image: assetUrl('/assets/history/京剧改革与创新.png'), text: '传统剧目整理与新编、现代题材创作并行，艺术家持续探索京剧如何呈现时代生活。' },
-  { number: '05', date: '2006年至今', title: '复兴与保护', image: assetUrl('/assets/history/复兴与保护.png'), text: '京剧列入国家级非遗名录，并于2010年列入联合国教科文组织人类非遗代表作名录；传承保护与当代表达继续同行。' },
+  { number: '01', date: '1790年', title: '徽班进京', image: assetUrl('assets/history/徽班进京.png'), text: '乾隆五十五年，三庆徽班进京献艺。此后徽班陆续入京，多种声腔在京城交汇，开启京剧孕育的序幕。' },
+  { number: '02', date: '1790—1917年', title: '京剧形成与成熟', image: assetUrl('assets/history/京剧形成与成熟.png'), text: '徽调、汉调与昆曲、秦腔等彼此吸收，逐渐形成以西皮、二黄为代表的声腔体系；清末至民初，京剧艺术走向成熟。' },
+  { number: '03', date: '1917—1937年前后', title: '京剧鼎盛时期', image: assetUrl('assets/history/京剧鼎盛时期.png'), text: '名家辈出、流派纷呈，演出与传播日益繁盛，京剧舞台呈现百花齐放的面貌。' },
+  { number: '04', date: '20世纪50年代起', title: '京剧改革与创新', image: assetUrl('assets/history/京剧改革与创新.png'), text: '传统剧目整理与新编、现代题材创作并行，艺术家持续探索京剧如何呈现时代生活。' },
+  { number: '05', date: '2006年至今', title: '复兴与保护', image: assetUrl('assets/history/复兴与保护.png'), text: '京剧列入国家级非遗名录，并于2010年列入联合国教科文组织人类非遗代表作名录；传承保护与当代表达继续同行。' },
 ]
 
 const appreciationImages = Array.from({ length: 12 }, (_, index) => {
   const suffix = ['213456', '213509', '213533', '213548', '213556', '213613', '213702', '213718', '213730', '213742', '213845', '213854'][index]
-  return { src: assetUrl(`/assets/appreciation/Screenshot_2026_1017_${suffix}.png`), number: String(index + 1).padStart(2, '0') }
+  return { src: assetUrl(`assets/appreciation/Screenshot_2026_1017_${suffix}.png`), number: String(index + 1).padStart(2, '0') }
 })
 
 const schools = [
-  { name: '梅派', person: '梅兰芳', image: assetUrl('/assets/schools/梅派.png'), mark: '梅', style: 'school-plum', tag: '端庄典雅 · 圆润含蓄', desc: '以典雅大方的舞台风度与细腻传神的表演，展现旦角艺术的隽永之美。', detail: '梅派在唱腔、念白、身段和舞台造型上融会创新，形成雍容端庄、细腻传神的表演风格。人物塑造重视内心情感与舞台美感的统一，常见剧目有《贵妃醉酒》《霸王别姬》等。' },
-  { name: '尚派', person: '尚小云', image: assetUrl('/assets/schools/尚派.png'), mark: '尚', style: 'school-blue', tag: '刚健婀娜 · 明快爽朗', desc: '唱腔高亢明亮，身段矫健洒脱，塑造坚毅而有力量的舞台形象。', detail: '尚派以刚健挺拔的身段、明快爽朗的气质见长，唱做并重，善于塑造性格鲜明、坚韧果敢的女性形象。舞台表演富有力度，也兼具旦角的婀娜之美。' },
-  { name: '程派', person: '程砚秋', image: assetUrl('/assets/schools/程派.png'), stagePosition: 'center 14%', mark: '程', style: 'school-ink', tag: '深沉婉转 · 幽咽含蓄', desc: '以幽咽婉转的声腔和深沉细腻的情感表达，形成独特的艺术风格。', detail: '程派声腔委婉深沉，讲究气息运用与字音韵味，擅长表现人物复杂、含蓄的内心世界。表演细腻克制，常以层层递进的情绪变化打动观众。' },
-  { name: '荀派', person: '荀慧生', image: assetUrl('/assets/schools/荀派.png'), stagePosition: 'center 19%', mark: '荀', style: 'school-rose', tag: '俏丽灵动 · 清新自然', desc: '表演活泼灵动、富有生活气息，塑造娇俏而鲜活的人物形象。', detail: '荀派表演清新活泼、富有生活气息，擅长刻画聪慧俏丽、个性鲜活的人物。唱腔流畅灵巧，身段自然生动，常在传统程式中融入细致的人物观察。' },
+  { name: '梅派', person: '梅兰芳', image: assetUrl('assets/schools/梅派.png'), mark: '梅', style: 'school-plum', tag: '端庄典雅 · 圆润含蓄', desc: '以典雅大方的舞台风度与细腻传神的表演，展现旦角艺术的隽永之美。', detail: '梅派在唱腔、念白、身段和舞台造型上融会创新，形成雍容端庄、细腻传神的表演风格。人物塑造重视内心情感与舞台美感的统一，常见剧目有《贵妃醉酒》《霸王别姬》等。' },
+  { name: '尚派', person: '尚小云', image: assetUrl('assets/schools/尚派.png'), mark: '尚', style: 'school-blue', tag: '刚健婀娜 · 明快爽朗', desc: '唱腔高亢明亮，身段矫健洒脱，塑造坚毅而有力量的舞台形象。', detail: '尚派以刚健挺拔的身段、明快爽朗的气质见长，唱做并重，善于塑造性格鲜明、坚韧果敢的女性形象。舞台表演富有力度，也兼具旦角的婀娜之美。' },
+  { name: '程派', person: '程砚秋', image: assetUrl('assets/schools/程派.png'), stagePosition: 'center 14%', mark: '程', style: 'school-ink', tag: '深沉婉转 · 幽咽含蓄', desc: '以幽咽婉转的声腔和深沉细腻的情感表达，形成独特的艺术风格。', detail: '程派声腔委婉深沉，讲究气息运用与字音韵味，擅长表现人物复杂、含蓄的内心世界。表演细腻克制，常以层层递进的情绪变化打动观众。' },
+  { name: '荀派', person: '荀慧生', image: assetUrl('assets/schools/荀派.png'), stagePosition: 'center 19%', mark: '荀', style: 'school-rose', tag: '俏丽灵动 · 清新自然', desc: '表演活泼灵动、富有生活气息，塑造娇俏而鲜活的人物形象。', detail: '荀派表演清新活泼、富有生活气息，擅长刻画聪慧俏丽、个性鲜活的人物。唱腔流畅灵巧，身段自然生动，常在传统程式中融入细致的人物观察。' },
 ]
 
 const inheritors = [
-  { name: '王珮瑜', image: assetUrl('/assets/inheritors/王佩瑜.jpeg'), role: '余派女老生 · 京剧传播者', description: '人称“瑜老板”，上海京剧院国家一级演员，余派女老生，致力于京剧普及传播。图片为《赵氏孤儿》舞台演出扮相。' },
-  { name: '于魁智', image: assetUrl('/assets/inheritors/于魁智.jpeg'), role: '杨派老生 · 国家一级演员', description: '国家京剧院一级演员，杨派老生代表，文武兼备。图片为经典剧目《空城计》诸葛亮舞台照。' },
-  { name: '李维康', image: assetUrl('/assets/inheritors/李维康.jpeg'), role: '旦角表演艺术家', description: '国家级非遗京剧传承人，著名旦角表演艺术家，戏路宽广。图片为《白蛇传》舞台剧照。' },
-  { name: '谭元寿', image: assetUrl('/assets/inheritors/谭元寿.jpeg'), role: '谭派第五代传人 · 文武老生', description: '谭派第五代传人，出身七代梨园世家，曾饰演《沙家浜》郭建光。图片为传统戏舞台扮相。' },
+  { name: '王珮瑜', image: assetUrl('assets/inheritors/王佩瑜.jpeg'), role: '余派女老生 · 京剧传播者', description: '人称“瑜老板”，上海京剧院国家一级演员，余派女老生，致力于京剧普及传播。图片为《赵氏孤儿》舞台演出扮相。' },
+  { name: '于魁智', image: assetUrl('assets/inheritors/于魁智.jpeg'), role: '杨派老生 · 国家一级演员', description: '国家京剧院一级演员，杨派老生代表，文武兼备。图片为经典剧目《空城计》诸葛亮舞台照。' },
+  { name: '李维康', image: assetUrl('assets/inheritors/李维康.jpeg'), role: '旦角表演艺术家', description: '国家级非遗京剧传承人，著名旦角表演艺术家，戏路宽广。图片为《白蛇传》舞台剧照。' },
+  { name: '谭元寿', image: assetUrl('assets/inheritors/谭元寿.jpeg'), role: '谭派第五代传人 · 文武老生', description: '谭派第五代传人，出身七代梨园世家，曾饰演《沙家浜》郭建光。图片为传统戏舞台扮相。' },
 ]
 
 const learningCards = [
-  { number: '01', title: '认识京剧行当', category: '入门基础', description: '从生、旦、净、丑入手，了解人物类型、舞台造型与表演特点。', icon: '行', image: assetUrl('/assets/learning/第一张.png') },
-  { number: '02', title: '听懂西皮与二黄', category: '音乐唱腔', description: '认识京剧两类主要声腔，留意旋律、节奏和情绪表达的差异。', icon: '音', image: assetUrl('/assets/learning/第二张.png') },
-  { number: '03', title: '看懂脸谱与服饰', category: '舞台美学', description: '观察色彩、纹样和装扮如何帮助观众理解人物身份与性格。', icon: '彩', image: assetUrl('/assets/learning/第三张.png') },
-  { number: '04', title: '走近经典剧目', category: '剧目赏析', description: '从《空城计》《白蛇传》等熟悉剧目开始，体会程式与故事。', icon: '戏', image: assetUrl('/assets/learning/第四张.png') },
+  { number: '01', title: '认识京剧行当', category: '入门基础', description: '从生、旦、净、丑入手，了解人物类型、舞台造型与表演特点。', icon: '行', image: assetUrl('assets/learning/第一张.png') },
+  { number: '02', title: '听懂西皮与二黄', category: '音乐唱腔', description: '认识京剧两类主要声腔，留意旋律、节奏和情绪表达的差异。', icon: '音', image: assetUrl('assets/learning/第二张.png') },
+  { number: '03', title: '看懂脸谱与服饰', category: '舞台美学', description: '观察色彩、纹样和装扮如何帮助观众理解人物身份与性格。', icon: '彩', image: assetUrl('assets/learning/第三张.png') },
+  { number: '04', title: '走近经典剧目', category: '剧目赏析', description: '从《空城计》《白蛇传》等熟悉剧目开始，体会程式与故事。', icon: '戏', image: assetUrl('assets/learning/第四张.png') },
 ]
 
 function SectionHeading({ kicker, title, description, light = false }) {

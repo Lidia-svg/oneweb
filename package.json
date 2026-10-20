@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
+    "build:offline": "vite build --config vite.offline.config.js",
+    "postbuild:offline": "node scripts/finish-offline-build.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

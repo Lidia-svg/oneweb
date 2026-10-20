@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const assetUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
-const DOLL_IMAGE = assetUrl('/assets/doll.png')
-const WAVE_IMAGE = assetUrl('/assets/doll-wave.png')
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`
+const DOLL_IMAGE = assetUrl('assets/doll.png')
+const WAVE_IMAGE = assetUrl('assets/doll-wave.png')
 const DESKTOP_DOLL_WIDTH = 96
 const MOBILE_DOLL_WIDTH = 64
 const GUIDE_URL = '#learning'
